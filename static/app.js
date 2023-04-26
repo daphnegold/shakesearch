@@ -5,12 +5,12 @@ const Controller = {
     const data = Object.fromEntries(new FormData(form));
     const response = fetch(`/search?q=${data.query}`).then((response) => {
       response.json().then((results) => {
-        Controller.updateTable(results);
+        Controller.updateTable(results, data.query);
       });
     });
   },
 
-  updateTable: (results) => {
+  updateTable: (results, query) => {
     const table = document.getElementById("table");
     table.innerHTML = "";
 
@@ -30,9 +30,10 @@ const Controller = {
     for (let result of results) {
       const row = document.createElement("tr");
       const tData = document.createElement("td");
+      const highlightedResult = result.replace(new RegExp(`(${query.toLowerCase()})`, 'gi'), '<span class="bg-pink-100">$1</span>');
       
       tData.className = "border border-gray-200 p-4";
-      tData.innerText = result;
+      tData.innerHTML = highlightedResult;
   
       row.appendChild(tData);
       tbody.appendChild(row);

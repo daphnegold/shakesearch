@@ -1,30 +1,28 @@
-# ShakeSearch
+# Daphne Makes ShakeSearch a Little Better
 
-Welcome to the Pulley Shakesearch Take-home Challenge! In this repository,
-you'll find a simple web app that allows a user to search for a text string in
-the complete works of Shakespeare.
+## Things I did
+- Rename 'master' branch to 'main'
+- Searches are now case insensitive on the backend
+- Played with hot reloading tool ['Air'](https://github.com/cosmtrek/air) because reasons
+- Integrated Tailwind for styling and made results a bit more presentable and easy to read
+- Display number of returned search results (but it's always plural, you have "1 Search **Results**" 😜)
+- Highlight search term in results
+- Deployed here: https://daphsearch.onrender.com/
+- Learned a lot! Read a lot!
 
-You can see a live version of the app at
-https://pulley-shakesearch.onrender.com/. Try searching for "Hamlet" to display
-a set of results.
+## Things I'd like to do
+There are so many things I'd like to do! I spent quite a while getting caught up in brainstorming and interpreting details of the backend, in addition to trying to implement some semblance of fuzzy search or to find a package that would allow it without much effort to integrate. The end result doesn't look like an awful lot, but I went on quite a few undocumented adventures and alternate implementations that didn't pan out. Oops. 
 
-In it's current state, however, the app is in rough shape. The search is
-case sensitive, the results are difficult to read, and the search is limited to
-exact matches.
+- Pagination/infinite scroll, loading spinner or skeleton
+- Fuzzy search allowing for better matches with imprecise or incorrect input
+- Additional information provided -- title, page, etc
+- Search filtering and sorting
+- Complete search results -- no more cutting off mid-word or mid-sentence
+- Ranked results with adjustable blurb size or even "see more" blurb option
+- Better design, some more personality :) Regretting not throwing in a marquee tag somewhere now
+- Different data storage solution -- not a text file, but a real data store
+- And in implementing a different storage solution, a more intuitive and easier way to retrieve search results and metadata than `SuffixArray`
+- Error handling and thorough testing
+- Get fancy with React or some frameworks, even fancier with caching
 
-## Your Mission
-
-Improve the app! Think about the problem from the **user's perspective**
-and prioritize your changes according to what you think is most useful.
-
-You can approach this with a back-end, front-end, or full-stack focus.
-
-## Evaluation
-
-We will be primarily evaluating based on how well the search works for users. A search result with a lot of features (i.e. multi-words and mis-spellings handled), but with results that are hard to read would not be a strong submission.
-
-## Submission
-
-1. Fork this repository and send us a link to your fork after pushing your changes.
-2. Render (render.com) hosting, the application deploys cleanly from a public url.
-3. In your submission, share with us what changes you made and how you would prioritize changes if you had more time.
+Thank you!
