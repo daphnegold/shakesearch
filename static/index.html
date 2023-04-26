@@ -1,27 +1,22 @@
 <!doctype html>
 <html class="no-js" lang="">
 
-<head>
-  <meta charset="utf-8">
-  <title>ShakeSearch</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#fafafa">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>ShakeSearch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="theme-color" content="#fafafa">
+  </head>
 
-<body>
-    <p>
-        <form id="form">
-            <label for="query">Query</label>
-            <input type="text" id="query" name="query">
-            <button type="submit">Search</button>
-        </form>
-    </p>
-    <p>
-        <table id="table">
-          <tbody id="table-body"></tbody>
-        </table>
-    </p>
-  <script src="app.js"></script>
-</body>
+  <body>
+    <form id="form" class="w-full max-w-2xl mx-auto p-2 border border-gray-200 flex">
+      <input type="text" id="query" name="query" placeholder="Query" class="flex-1 mx-2 p-1">
+      <button type="submit" class="">Search</button>
+    </form>
+    <table id="table" class="w-full max-w-2xl mx-auto border-separate">
+    </table>
+    <script src="app.js"></script>
+  </body>
 
 </html>
